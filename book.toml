@@ -1,0 +1,11 @@
+[book]
+authors = ["Bidemi Dairo"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Automation Assistant Trainee Program"
+
+[build]
+build-dir = "output"
+create-missing = true
+use-default-preprocessors = false

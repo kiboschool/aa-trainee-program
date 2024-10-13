@@ -1,0 +1,815 @@
+# Visit https://docs.google.com/document/d/1Hm41CGu0pZrGB7_XrPZR50DU7DXvqeC6aZuaTLpRLlo/edit 
+# for full details about the contents of the course.yml file. 
+# 
+# - Top level details of the course: 
+#     name: course name
+#     code: course code
+#     term: when is this offered
+#     about_path: the path to the course overview md file
+#     image_path: the path to an image to use as the course header
+#
+# - Units
+#     name: name of the unit (e.g. Week 1: Introduction)
+#     activities: list of the activities in the Unit
+# 
+# - Activities
+#     name: name of the activity
+#     path: where to find the file for the activity
+#     workload: how many minutes the activity is estimated to take
+#     type: `lesson` or `assignment`
+#     kind: airlock resource kind: 
+#       `GENERAL`, `MEETING`, `PUBLICATION`, `PUBLICATION_REVIEWED`, 
+#       `ASSIGNMENT`, `ASSIGNMENT_SUMMATIVE`
+#     publish: Is this ready, or still a draft? Publish can be set to:
+#       - `true` (publish to students now)
+#       - `false` (do not publish to students), default value if not specified
+#       - date, formatted like `2023-10-25` (publish to students on that date) 
+#     due: When is the due date for the activity (e.g. 2023-12-27)
+#     grade_weight: what percent of the course grade is this 
+#       (for now, only for assignments).  Must sum to 100.
+
+name: Automation Assistants Trainee Program
+code: AATP
+term: AAT2
+about_path: src/front-matter/course-overview.md
+image_path: src/glowing-charts.png
+units:
+  - name: Program Overview
+    activities:
+      - name: Introduction
+        path: src/front-matter/course-overview.md
+        type: lesson
+        kind: GENERAL
+        workload: 15
+        publish: true
+      - name: Skills and Tools
+        path: src/front-matter/course-tools.md
+        type: lesson
+        kind: GENERAL
+        workload: 15
+        publish: true
+      - name: Evaluation
+        path: src/front-matter/assessments.md
+        type: lesson
+        kind: GENERAL
+        workload: 15
+        publish: true
+      - name: Getting & Giving Help
+        path: src/front-matter/giving-help.md
+        type: lesson
+        kind: GENERAL
+        workload: 15
+        publish: true
+      - name: Expectations
+        path: src/front-matter/expectations.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: true  
+  - name: Data Analysis
+    activities:
+      - name: Introduction
+        path: src/lessons/data-analysis/introduction.md
+        type: lesson
+        kind: GENERAL
+        workload: 15
+        publish: true
+      - name: Why no-code?
+        path: src/lessons/data-analysis/motivation-nocode.md
+        type: lesson
+        kind: GENERAL
+        workload: 15
+        publish: true
+      - name: No-code/Low-code Development
+        path: src/lessons/data-analysis/nocode-lowcode.md
+        type: lesson
+        kind: GENERAL
+        workload: 15
+        publish: true
+      - name: Why Google Sheets?
+        path: src/lessons/data-analysis/motivation-googlesheets.md
+        type: lesson
+        kind: GENERAL
+        workload: 15
+        publish: true
+      - name: "Project: Data Analysis with Google Sheets"
+        path: src/lessons/data-analysis/project-streaming-video.md
+        type: assignment
+        kind: ASSIGNMENT
+        workload: 300
+        publish: true
+        due: 2024-05-10
+        grade_weight: 10
+      - name: Learn Google Sheets
+        path: src/lessons/data-analysis/learn-googlesheets.md
+        type: lesson
+        kind: GENERAL
+        workload: 170
+        publish: true
+  - name: Ownership 
+    activities:
+      - name: Introduction to Human Skills
+        path: src/lessons/ownership/introduction.md
+        type: lesson
+        kind: GENERAL
+        workload: 15
+        publish: 2024-05-06
+      - name: Case Study
+        path: src/lessons/ownership/case-study.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: false
+      - name: Career Coach
+        path: src/lessons/ownership/career-coach.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: 2024-05-06
+      - name: Ownership Mindset
+        path: src/lessons/ownership/mindset.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: 2024-05-06
+      - name: Career Development
+        path: src/lessons/ownership/career-development.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: 2024-05-06
+      - name: Finding Your I
+        path: src/lessons/ownership/find-your-i.md
+        type: lesson
+        kind: GENERAL
+        workload: 90
+        publish: 2024-05-06
+      - name: "Project: Personal SWOT"
+        path: src/lessons/ownership/project-swot.md
+        type: lesson
+        kind: GENERAL
+        workload: 180
+        due: 2024-05-10
+        publish: 2024-05-06
+  - name: Data Visualization
+    activities:
+      - name: Introduction
+        path: src/lessons/data-viz/introduction.md
+        type: lesson
+        kind: GENERAL
+        workload: 15
+        publish: 2024-05-13
+      - name: Why Data Viz?
+        path: src/lessons/data-viz/why-data-viz.md
+        type: lesson
+        kind: GENERAL
+        workload: 15
+        publish: 2024-05-13
+      - name: "Project: Build a Dashboard with Google Sheets"
+        path: src/lessons/data-viz/project-dashboard-with-google-sheets.md
+        type: assignment
+        kind: ASSIGNMENT
+        workload: 300
+        publish: 2024-05-13
+        due: 2024-05-17
+        grade_weight: 10
+      - name: "Learn: dashboards with Google Sheets"
+        path: src/lessons/data-viz/learn-data-viz.md
+        type: lesson
+        kind: GENERAL
+        workload: 75
+        publish: 2024-05-13
+      - name: Introduction to Glide
+        path: src/lessons/data-viz/introduction-glide.md
+        type: lesson
+        kind: GENERAL
+        workload: 10
+        publish: 2024-05-13
+      - name: "Project: Build a Glide App" 
+        path: src/lessons/data-viz/project-build-glide-app.md
+        type: assignment
+        kind: ASSIGNMENT
+        workload: 300
+        publish: 2024-05-13
+        due: 2024-05-17
+        grade_weight: 5
+      - name: "Learn: apps with Glide"
+        path: src/lessons/data-viz/learn-glide.md
+        type: lesson
+        kind: GENERAL
+        workload: 15
+        publish: 2024-05-13
+  - name: "Written Communication"
+    activities:
+      - name: Introduction
+        path: src/lessons/writing/intro.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: 2024-05-13
+      - name: Case Study
+        path: src/lessons/writing/case-study.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: 2024-05-13
+      - name: Writing Self Assessment
+        path: src/lessons/writing/self-assessment.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: 2024-05-13
+      - name: Evaluating Written Communication
+        path: src/lessons/writing/evaluating-writing.md
+        type: lesson
+        kind: GENERAL
+        workload: 60
+        publish: 2024-05-13
+      - name: The Writing Process
+        path: src/lessons/writing/writing-process.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: 2024-05-13
+      - name: Perils of Using AI
+        path: src/lessons/writing/ai.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: 2024-05-13
+      - name: "Project: Technical Blog Post"
+        path: src/lessons/writing/project-blog.md
+        type: assignment
+        kind: ASSIGNMENT
+        workload: 120
+        publish: 2024-05-13
+        due: 2024-05-17
+        grade_weight: 5
+  - name: "Managing Self"
+    activities:
+      - name: Introduction
+        path: src/lessons/self-management/intro.md
+        type: lesson
+        kind: GENERAL
+        workload: 15
+        publish: 2024-05-20
+      - name: Case Study
+        path: src/lessons/self-management/case-study.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: 2024-05-20
+      - name: Managing Yourself
+        path: src/lessons/self-management/managing-self.md
+        type: lesson
+        kind: GENERAL
+        workload: 60
+        publish: 2024-05-20
+      - name: Managing Your Time
+        path: src/lessons/self-management/time-management.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: 2024-05-20
+      - name: Calendars at work
+        path: src/lessons/self-management/calendaring.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: 2024-05-20
+      - name: Project Management Basics
+        path: src/lessons/self-management/introduction-trello.md
+        type: lesson
+        kind: GENERAL
+        workload: 15
+        publish: 2024-05-20
+      - name: "Learn: project management with Trello"
+        path: src/lessons/self-management/learn-trello.md
+        type: lesson
+        kind: GENERAL
+        workload: 15
+        publish: 2024-05-20
+      - name: "Task: Set up personal Trello board"
+        path: src/lessons/self-management/task-setting-up-trello.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: 2024-05-20
+  - name: "Final Project: Data Analysis and Visualization"
+    activities:
+      - name: Introduction
+        path: src/lessons/final-project-data/introduction.md
+        type: lesson
+        kind: GENERAL
+        workload: 15
+        publish: 2024-05-20
+      - name: "Project: United Superstore Performance Analysis Report"
+        path: src/lessons/final-project-data/team-project.md
+        type: assignment
+        kind: ASSIGNMENT
+        workload: 600
+        publish: 2024-05-20
+        due: 2024-05-24
+        grade_weight: 9
+      - name: Additional resources
+        path: src/lessons/final-project-data/additional-resources.md
+        type: lesson
+        kind: GENERAL
+        workload: 70
+        publish: 2024-05-20
+  - name: Speaking well
+    activities:
+      - name: Introduction
+        path: src/lessons/speaking/intro.md
+        type: lesson
+        kind: GENERAL
+        workload: 15
+        publish: 2024-05-27
+      - name: Case study
+        path: src/lessons/speaking/case-study.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: 2024-05-27
+      - name: How to speak
+        path: src/lessons/speaking/how-to-speak.md
+        type: lesson
+        kind: GENERAL
+        workload: 90
+        publish: 2024-05-27
+      - name: Powerful Introductions
+        path: src/lessons/speaking/powerful-intros.md
+        type: lesson
+        kind: GENERAL
+        workload: 60
+        publish: 2024-05-27
+      - name: Virtual Presence
+        path: src/lessons/speaking/virtual-presence.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: 2024-05-27
+      - name: "Project: elevator pitch"
+        path: src/lessons/speaking/project-pitch.md
+        type: assignment
+        kind: ASSIGNMENT
+        workload: 120
+        publish: 2024-05-27
+        due: 2024-05-31
+        grade_weight: 1
+  - name: Introduction to Airtable
+    activities:
+      - name: Introduction
+        path: src/lessons/intro-airtable/introduction.md
+        type: lesson
+        kind: GENERAL
+        workload: 20
+        publish: 2024-05-27
+      - name: Why Airtable?
+        path: src/lessons/intro-airtable/why-airtable.md
+        type: lesson
+        kind: GENERAL
+        workload: 5
+        publish: 2024-05-27
+      - name: Airtable  Vs. Spreadsheets
+        path: src/lessons/intro-airtable/airtable-vs-google-sheets.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: 2024-05-27
+      - name: Setup Airtable
+        path: src/lessons/intro-airtable/setup-airtable.md
+        type: lesson
+        kind: GENERAL
+        workload: 5
+        publish: 2024-05-27
+      - name: Getting started with Airtable
+        path: src/lessons/intro-airtable/getting-started.md
+        type: lesson
+        kind: GENERAL
+        workload: 60
+        publish: 2024-05-27
+      - name: Collaboration with Airtable
+        path: src/lessons/intro-airtable/airtable-collaboration.md
+        type: lesson
+        kind: GENERAL
+        workload: 5
+        publish: 2024-05-27
+      - name: Airtable Views and Forms
+        path: src/lessons/intro-airtable/airtable-view-forms.md
+        type: lesson
+        kind: GENERAL
+        workload: 20
+        publish: 2024-05-27
+      - name: Link records in Airtable
+        path: src/lessons/intro-airtable/link-records.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: 2024-05-27
+      - name: Table relationships in a database
+        path: src/lessons/intro-airtable/understand-relationships.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: 2024-05-27
+      - name: "Project: Operations and Customer Communication System"
+        path: src/lessons/intro-airtable/project-ecommerce.md
+        type: assignment
+        kind: ASSIGNMENT
+        workload: 600
+        publish: 2024-05-27
+        due: 2024-05-31
+        grade_weight: 10
+  - name: Advanced Airtable
+    activities:
+      - name: Introduction
+        path: src/lessons/advanced-airtable/introduction.md
+        type: lesson
+        kind: GENERAL
+        workload: 20
+        publish: 2024-06-02
+      - name: Lookup and Rollup Fields in Airtable
+        path: src/lessons/advanced-airtable/lookup-rollup.md
+        type: lesson
+        kind: GENERAL
+        workload: 25
+        publish: 2024-06-02
+      - name: Airtable Interfaces
+        path: src/lessons/advanced-airtable/airtable-interfaces.md
+        type: lesson
+        kind: GENERAL
+        workload: 40
+        publish: 2024-06-02
+      - name: Airtable Automations
+        path: src/lessons/advanced-airtable/airtable-automations.md
+        type: lesson
+        kind: GENERAL
+        workload: 40
+        publish: 2024-06-02
+      - name: Introduction to JavaScript
+        path: src/lessons/advanced-airtable/js-intro.md
+        type: lesson
+        kind: GENERAL
+        workload: 100
+        publish: 2024-06-02
+      - name: Scripting in Airtable
+        path: src/lessons/advanced-airtable/airtable-scripting.md
+        type: lesson
+        kind: GENERAL
+        workload: 40
+        publish: 2024-06-02
+      - name: "Project: Operations and Customer Communication System - Continued"
+        path: src/lessons/advanced-airtable/project-ecommerce.md
+        type: assignment
+        kind: ASSIGNMENT
+        workload: 600
+        publish: 2024-06-02
+        due: 2024-06-07
+        grade_weight: 10
+      - name: "Project: Six Months Employee Review Automation"
+        path: src/lessons/advanced-airtable/project-employee-review.md
+        type: assignment
+        kind: ASSIGNMENT
+        workload: 600
+        publish: 2024-06-02
+        due: 2024-06-07
+        grade_weight: 9
+  - name: "Final Project: Airtable"
+    activities:
+      - name: Introduction
+        path: src/lessons/final-project-airtable/introduction.md
+        type: lesson
+        kind: GENERAL
+        workload: 15
+        publish: 2024-06-10
+      - name: Documentation
+        path: src/lessons/final-project-airtable/documentation.md
+        type: lesson
+        kind: GENERAL
+        workload: 70
+        publish: 2024-06-10
+      - name: "Project: Squad Cup Automation"
+        path: src/lessons/final-project-airtable/project-squad-cup.md
+        type: assignment
+        kind: ASSIGNMENT
+        workload: 1200
+        publish: 2024-06-10
+        due: 2024-06-14
+        grade_weight: 10
+  - name: Automation with Zapier and Google Forms
+    activities:
+      - name: Introduction
+        path: src/lessons/zapier-google-forms/introduction.md
+        type: lesson
+        kind: GENERAL
+        workload: 20
+        publish: 2024-06-17
+      - name: Why Zapier?
+        path: src/lessons/zapier-google-forms/why-zapier.md
+        type: lesson
+        kind: GENERAL
+        workload: 40
+        publish: 2024-06-17
+      - name: "Learn: Zapier"
+        path: src/lessons/zapier-google-forms/learn-zapier.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: 2024-06-17
+      - name: Zapier Integrations
+        path: src/lessons/zapier-google-forms/zapier-integrations.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: 2024-06-17
+      - name: Troubleshooting Zaps
+        path: src/lessons/zapier-google-forms/troubleshooting-zaps.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: 2024-06-17
+      - name: Introduction to Google Forms
+        path: src/lessons/zapier-google-forms/google-forms.md
+        type: lesson
+        kind: GENERAL
+        workload: 60
+        publish: 2024-06-17
+      - name: Additional Resources
+        path: src/lessons/zapier-google-forms/additional-resources.md
+        type: lesson
+        kind: GENERAL
+        workload: 15
+        publish: 2024-06-17
+      - name: Build Problem Solving Skills
+        path: src/lessons/zapier-google-forms/problem-solving.md
+        type: lesson
+        kind: GENERAL
+        workload: 35
+        publish: 2024-06-17
+      - name: "Project: Employee Leave Days Automation"
+        path: src/lessons/zapier-google-forms/employee-leave-days.md
+        type: assignment
+        kind: ASSIGNMENT
+        workload: 600
+        publish: 2024-06-17
+        due: 2024-06-21
+        grade_weight: 12
+  - name: "Presenting with confidence"
+    activities:
+      - name: Introduction
+        path: src/lessons/presenting/introduction.md
+        type: lesson
+        kind: GENERAL
+        workload: 15
+        publish: 2024-06-17
+      - name: Case Study
+        path: src/lessons/presenting/case-study.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: 2024-06-17
+      - name: Public Speaking
+        path: src/lessons/presenting/public-speaking.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: 2024-06-17
+      - name: Effective Presentations
+        path: src/lessons/presenting/effective-presentations.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: 2024-06-17
+      - name: Presentations slides
+        path: src/lessons/presenting/visuals.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: 2024-06-17
+      - name: Project
+        path: src/lessons/presenting/project-presentation.md
+        type: assignment
+        kind: ASSIGNMENT
+        workload: 180
+        publish: 2024-06-17
+        due: 2024-06-21
+        grade_weight: 1
+  - name: "Final Project: Zapier"
+    activities:
+      - name: Introduction
+        path: src/lessons/zapier-final/introduction.md
+        type: lesson
+        kind: GENERAL
+        workload: 15
+        publish: 2024-06-24
+      - name: "Remote Work Etiquette"
+        path: src/lessons/zapier-final/remote-work-etiquette.md
+        type: lesson
+        kind: GENERAL
+        workload: 40
+        publish: 2024-06-24
+      - name: "Project: Advisor Check-in Automation"
+        path: src/lessons/zapier-final/project-advisor-checkin.md
+        type: assignment
+        kind: ASSIGNMENT
+        workload: 600
+        publish: 2024-06-24
+        due: 2024-06-28
+        grade_weight: 2
+      - name: "Additional Resources"
+        path: src/lessons/zapier-final/additional-resources.md
+        type: lesson
+        kind: GENERAL
+        workload: 160
+        publish: 2024-06-24
+  - name: Automation with Make
+    activities:
+      - name: Introduction
+        path: src/lessons/make-automation/introduction.md
+        type: lesson
+        kind: GENERAL
+        workload: 15
+        publish: 2024-07-01
+      - name: "Why Make?"
+        path: src/lessons/make-automation/why-make.md
+        type: lesson
+        kind: GENERAL
+        workload: 10
+        publish: 2024-07-01
+      - name: "Zapier vs. Make"
+        path: src/lessons/make-automation/zapier-vs-make.md
+        type: lesson
+        kind: GENERAL
+        workload: 25
+        publish: 2024-07-01
+      - name: "Introduction to Make"
+        path: src/lessons/make-automation/learn-make.md
+        type: lesson
+        kind: GENERAL
+        workload: 70
+        publish: 2024-07-01
+      - name: "Make Triggers"
+        path: src/lessons/make-automation/make-triggers.md
+        type: lesson
+        kind: GENERAL
+        workload: 10
+        publish: 2024-07-01
+      - name: "Make Routers and Filters"
+        path: src/lessons/make-automation/make-routers-filters.md
+        type: lesson
+        kind: GENERAL
+        workload: 15
+        publish: 2024-07-01
+      - name: "Make Arrays and Collections"
+        path: src/lessons/make-automation/arrays-collections.md
+        type: lesson
+        kind: GENERAL
+        workload: 35
+        publish: 2024-07-01
+      - name: "Make Functions"
+        path: src/lessons/make-automation/make-functions.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: 2024-07-01
+      - name: "Make Webhooks"
+        path: src/lessons/make-automation/make-webhooks.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: 2024-07-01
+      - name: "Error Handling in Make"
+        path: src/lessons/make-automation/error-handling.md
+        type: lesson
+        kind: GENERAL
+        workload: 20
+        publish: 2024-07-01
+      - name: "Additional Resources"
+        path: src/lessons/make-automation/additional-resources.md
+        type: lesson
+        kind: GENERAL
+        workload: 160
+        publish: 2024-07-01
+  - name: Data Collection with Typeform
+    activities:
+      - name: Introduction
+        path: src/lessons/typeform/introduction.md
+        type: lesson
+        kind: GENERAL
+        workload: 15
+        publish: 2024-07-01
+      - name: "Why Typeform?"
+        path: src/lessons/typeform/why-typeform.md
+        type: lesson
+        kind: GENERAL
+        workload: 10
+        publish: 2024-07-01
+      - name: "Learn Typeform"
+        path: src/lessons/typeform/learn-typeform.md
+        type: lesson
+        kind: GENERAL
+        workload: 40
+        publish: 2024-07-01
+      - name: "Typeform Logic"
+        path: src/lessons/typeform/typeform-logic.md
+        type: lesson
+        kind: GENERAL
+        workload: 20
+        publish: 2024-07-01
+      - name: "Typeform Variables and Hidden Fields"
+        path: src/lessons/typeform/variables-hfields.md
+        type: lesson
+        kind: GENERAL
+        workload: 20
+        publish: 2024-07-01
+      - name: "Project: Try Kibo Application Workflow"
+        path: src/lessons/typeform/project-tk.md
+        type: assignment
+        kind: ASSIGNMENT
+        workload: 1200
+        publish: 2024-07-01
+        due: 2024-07-05
+        grade_weight: 2
+  - name: Capstone Project
+    activities:
+      - name: Introduction
+        path: src/lessons/Capstone/introduction.md
+        type: lesson
+        kind: GENERAL
+        workload: 15
+        publish: true
+      - name: "Capstone Project"
+        path: src/lessons/Capstone/project-capstone.md
+        type: assignment
+        kind: ASSIGNMENT
+        workload: 1800
+        publish: true
+        due: 2024-07-22
+        grade_weight: 4
+  - name: Job Search
+    activities:
+      - name: "Introduction"
+        path: src/lessons/job-search/intro.md
+        type: lesson
+        kind: GENERAL
+        workload: 15
+        publish: 2024-07-30
+      - name: "Power of Storytelling"
+        path: src/lessons/job-search/storytelling.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: 2024-07-30
+      - name: "Powerful Introductions"
+        path: src/lessons/job-search/powerful-introductions.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: 2024-07-30
+      - name: "Crafting a Killer Resume"
+        path: src/lessons/job-search/resume.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: 2024-07-30
+      - name: "Optimizing your LinkedIn Profile"
+        path: src/lessons/job-search/linkedin.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: 2024-07-30
+      - name: "Building Your Portfolio"
+        path: src/lessons/job-search/portfolio.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: 2024-07-30
+      - name: "Planning for Interview Success"
+        path: src/lessons/job-search/interviewing-tips.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: 2024-07-30
+      - name: "Using STAR stories in Behavioral Interviews"
+        path: src/lessons/job-search/behavioral-interviews.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: 2024-07-30
+      - name: "Scaling Tech Interviews with Confidence"
+        path: src/lessons/job-search/tech-interviews.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: 2024-07-30
+      - name: "Project: applying for a role"
+        path: src/lessons/job-search/project-applying.md
+        type: lesson
+        kind: GENERAL
+        workload: 30
+        publish: 2024-07-30
+        
+    
+      
+      
